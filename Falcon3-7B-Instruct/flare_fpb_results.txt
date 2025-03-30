@@ -1,0 +1,9 @@
+Selected Tasks: ['flare_fpb']
+INFO 03-30 07:34:47 llm_engine.py:174] Initializing an LLM engine (v0.5.4) with config: model='tiiuae/Falcon3-7B-Instruct', speculative_config=None, tokenizer='tiiuae/Falcon3-7B-Instruct', skip_tokenizer_init=False, tokenizer_mode=slow, revision=main, rope_scaling=None, rope_theta=None, tokenizer_revision=main, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None), seed=0, served_model_name=tiiuae/Falcon3-7B-Instruct, use_v2_block_manager=False, enable_prefix_caching=False)
+INFO 03-30 07:34:48 model_runner.py:720] Starting to load model tiiuae/Falcon3-7B-Instruct...
+INFO 03-30 07:34:48 weight_utils.py:225] Using model weights format ['*.safetensors']
+INFO 03-30 07:34:53 model_runner.py:732] Loading model weights took 13.9300 GB
+INFO 03-30 07:34:55 gpu_executor.py:102] # GPU blocks: 9522, # CPU blocks: 2340
+INFO 03-30 07:34:59 model_runner.py:1024] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 03-30 07:34:59 model_runner.py:1028] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 03-30 07:35:29 model_runner.py:1225] Graph capturing finished in 30 secs.
