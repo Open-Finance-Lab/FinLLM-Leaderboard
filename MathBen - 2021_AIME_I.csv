@@ -1,0 +1,47 @@
+question,answer,evidence_text,generated_answer,gpt -1o
+"Zou and Chou are practicing their 100-meter sprints by running 6 races against each other. Zou wins the first race, and after that, the probability that one of them wins a race is 
+\(\frac{2}{3}\) if they won the previous race but only \(\frac{1}{3}\) if they lost the previous race. The probability that Zou will win exactly 5 of the 6 races is 
+\(\frac{m}{n}\), where \(m\) and \(n\) are relatively prime positive integers. Find \(m + n\).
+",,,,
+Find the number of positive integers less than \(1000\) that can be expressed as the difference of two integral powers of \(2\).,,,,
+Find the number of ways \(66\) identical coins can be separated into three nonempty piles so that there are fewer coins in the first pile than in the second pile and fewer coins in the second pile than in the third pile.,,,,
+Call a three-term strictly increasing arithmetic sequence of integers special if the sum of the squares of the three terms equals the product of the middle term and the square of the common difference. Find the sum of the third terms of all special sequences.,,,,
+"Segments \(\overline{AB}\), \(\overline{AC}\), and \(\overline{AD}\) are edges of a cube and \(\overline{AG}\) is a diagonal through the center of the cube. Point \(P\) satisfies 
+\[
+PB = 60\sqrt{10}, \, PC = 60\sqrt{5}, \, PD = 120\sqrt{2}, \, \text{and} \, PG = 36\sqrt{7}.
+\]
+What is \(PA\)?
+",,,,
+"Find the number of pairs \((m, n)\) of positive integers with \(1 \leq m < n \leq 30\) such that there exists a real number \(x\) satisfying 
+\[
+\sin(mx) + \sin(nx) = 2.
+\]
+",,,,
+"Find the number of integers \(c\) such that the equation
+\[
+\lvert 20\lvert x\rvert - x^2 - c \rvert = 21
+\]
+has \(12\) distinct real solutions.
+",,,,
+"Let \(ABCD\) be an isosceles trapezoid with \(AD = BC\) and \(AB < CD\). Suppose that the distances from \(A\) to the lines \(BC\), \(CD\), and \(BD\) are \(15\), \(18\), and \(10\), respectively. Let \(K\) be the area of \(ABCD\). Find \(\sqrt{2} \cdot K\).
+",,,,
+"Consider the sequence \((a_k)_{k \geq 1}\) of positive rational numbers defined by \(a_1 = \frac{2020}{2021}\) and for \(k \geq 1\), if \(a_k = \frac{m}{n}\) for relatively prime positive integers \(m\) and \(n\), then
+\[
+a_{k+1} = \frac{m+18}{n+19}.
+\]
+Determine the sum of all positive integers \(j\) such that the rational number \(a_j\) can be written in the form \(\frac{t}{t+1}\) for some positive integer \(t\).
+",,,,
+"Let \(ABCD\) be a cyclic quadrilateral with \(AB = 4\), \(BC = 5\), \(CD = 6\), and \(DA = 7\). Let \(A_1\) and \(C_1\) be the feet of the perpendiculars from \(A\) and \(C\), respectively, to line \(BD\), and let \(B_1\) and \(D_1\) be the feet of the perpendiculars from \(B\) and \(D\), respectively, to line \(AC\). The perimeter of \(A_1B_1C_1D_1\) is \(\frac{m}{n}\), where \(m\) and \(n\) are relatively prime positive integers. Find \(m + n\).
+",,,,
+"Let \(A_1A_2A_3 \ldots A_{12}\) be a dodecagon (12-gon). Three frogs initially sit at \(A_4\), \(A_8\), and \(A_{12}\). At the end of each minute, simultaneously, each of the three frogs jumps to one of the two vertices adjacent to its current position, chosen randomly and independently with both choices being equally likely. All three frogs stop jumping as soon as two frogs arrive at the same vertex at the same time. The expected number of minutes until the frogs stop jumping is \(\frac{m}{n}\), where \(m\) and \(n\) are relatively prime positive integers. Find \(m + n\).
+",,,,
+"Circles \(\omega_1\) and \(\omega_2\) with radii \(961\) and \(625\), respectively, intersect at distinct points \(A\) and \(B\). A third circle \(\omega\) is externally tangent to both \(\omega_1\) and \(\omega_2\). Suppose line \(AB\) intersects \(\omega\) at two points \(P\) and \(Q\) such that the measure of minor arc \(\widehat{PQ}\) is \(120^\circ\). Find the distance between the centers of \(\omega_1\) and \(\omega_2\).
+",,,,
+"For any positive integer \(a\), \(\sigma(a)\) denotes the sum of the positive integer divisors of \(a\). Let \(n\) be the least positive integer such that \(\sigma(a^n) - 1\) is divisible by \(2021\) for all positive integers \(a\). Find the sum of the prime factors in the prime factorization of \(n\).
+",,,,
+"Let \(S\) be the set of positive integers \(k\) such that the two parabolas
+\[
+y = x^2 - k \quad \text{and} \quad x = 2(y - 20)^2 - k
+\]
+intersect in four distinct points, and these four points lie on a circle with radius at most \(21\). Find the sum of the least element of \(S\) and the greatest element of \(S\).
+",,,,
