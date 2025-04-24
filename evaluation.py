@@ -51,10 +51,9 @@ def extract_xbrl_tags(queries):
                 "id": idx + 1,
                 "query": query['query'],
                 "text": ''.join(extracted_data),
-                "answer": ""
+                "answer": query.get("raw_answer")  
             }
             results.append(result)
-
     return results
 
 def format_element_data(elem):
@@ -63,9 +62,8 @@ def format_element_data(elem):
             f"decimals=\"{elem.get('decimals', 'None')}\" "
             f"id=\"{elem.get('id', 'None')}\" "
             f"unitRef=\"{elem.get('unitRef', 'None')}\">{elem.text.strip() if elem.text else 'None'}</{elem.tag}>\n")
-
 # Load queries from JSON file
-with open('./XBRLBench-use.json', 'r') as file:
+with open('./XBRL_200.json', 'r') as file:
     queries = json.load(file)
 
 # Run the function and get results
@@ -75,5 +73,5 @@ formatted_results = extract_xbrl_tags(queries)
 formatted_json = json.dumps(formatted_results, indent=4)  # Use indent for pretty printing
 
 # Optionally, save the formatted JSON back to a file
-with open('./Updated_XBRL.json', 'w') as outfile:
+with open('./Updated_200_XBRL.json', 'w') as outfile:
     outfile.write(formatted_json)
