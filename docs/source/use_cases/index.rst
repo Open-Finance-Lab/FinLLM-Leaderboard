@@ -1,5 +1,5 @@
 =============
-Use Scenarios
+Use Cases
 =============
 
 .. toctree::
