@@ -19,4 +19,6 @@ OpenFinLLM Leaderboard Documentation documentation
    basics_setup/index
    tutorials/index
    use_cases/index
+   frequently_asked/index
+
 
