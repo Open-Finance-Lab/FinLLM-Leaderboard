@@ -15,7 +15,7 @@ Install CUDA Toolkit
 
    - Skip this installation (Colab provides pre-installed CUDA environments)
 
-   - Proceed directly to :doc:`/basics_setup/get_api_keys`
+   - Proceed directly to :doc:`/tutorials/get_api_keys`
 
 
 Install Cuda
