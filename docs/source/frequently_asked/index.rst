@@ -1,5 +1,5 @@
 ==========================
-Frequently Asked Questions
+FAQs
 ==========================
 
 .. toctree::
