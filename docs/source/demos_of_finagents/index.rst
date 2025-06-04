@@ -9,7 +9,7 @@ Demos of FinAgents
    search_agent
    trading_agent
    XBRL_agent
-   ECC_Analyzer
+   ECC_analyzer
 
 
 
