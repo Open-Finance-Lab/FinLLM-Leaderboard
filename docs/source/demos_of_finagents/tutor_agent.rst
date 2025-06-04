@@ -33,6 +33,9 @@ A student preparing for a credit risk management exam faces complex formulas and
 **Professional Development**  
 A software engineer needs to quickly learn financial terms (Market Cap, EBITDA, Balance Sheet) before meeting with the FP&A team. The AI tutor delivers contextual, work-relevant explanations efficiently.
 
+**Research Advisor**
+An online student pursuing independent research in finance but lacks access to academic advisors. The AI tutor helps identify unexplored research areas, outlines research phases, and provides ongoing feedback throughout the research process.
+
 .. image:: ./figures/tutor_agent_framework.png
    :width: 100%
    :align: center
