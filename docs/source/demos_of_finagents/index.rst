@@ -7,9 +7,9 @@ Demos of FinAgents
 
    tutor_agent
    search_agent
-   Trading Agent
-   XBRL Agent
-   ECC Analyzer
+   trading_agent
+   XBRL_agent
+   ECC_Analyzer
 
 
 
