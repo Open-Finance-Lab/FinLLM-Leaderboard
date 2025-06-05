@@ -25,4 +25,5 @@ in the following two days. The entire ECC is saved as a ".mp3/.wav" audio file, 
    :width: 80%
    :align: center
 
+- Check our paper:
 `Paper: Cao, Yupeng, et al. "ECC Analyzer: Extracting Trading Signal from Earnings Conference Calls using Large Language Model for Stock Volatility Prediction." Proceedings of the 5th ACM International Conference on AI in Finance. 2024. <https://arxiv.org/pdf/2404.18470>`_
