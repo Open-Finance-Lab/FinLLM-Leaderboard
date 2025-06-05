@@ -30,3 +30,8 @@ The figure shows an example using the search agent to answer a user's query abou
     - The user was reading an article about Tesla on CNBC. He can directly opens the FinGPT window and asks: “based on this article, what are some key findings related to Tesla’s stock?”
     - The agent scraped the user-specified website, i.e., CNBC, extracted the relevant content, and analyzed the content using the LLMs. It provided the user with a summary of the key findings related to Tesla's stock based on this article.
     - The user can add the CNBC website to the list of preferred websites, so that the agent can scrape and analyze the CNBC website in the future.
+
+- Paper:
+
+`CustomizedFinGPT Search Agents Using Foundation Models. ICAIF 2024. <https://arxiv.org/pdf/2410.15284>`_
+
