@@ -2,11 +2,13 @@
 ECC Analyzer
 ========================================================================
 
-The earnings conference call (ECC) is a teleconference or webcast held quarterly by a public company. Stakeholders (including analysts, investors, and the media) participate to obtain the company’s latest financial status. First, the company’s CEO/CFO highlights
+The earnings conference call (ECC) is a teleconference or webcast held quarterly by a public company. Stakeholders (including analysts, investors, and the media) participate to obtain the company’s latest financial status. 
+
+First, the company’s CEO/CFO highlights
 the quarterly financial status, strategic initiatives, and forward-looking plans. Then, analysts and investors ask questions in the Q&A sessions. The release of ECCs is correlated with market reactions, making them an important resource for analyzing market changes.
 
-- Earning Conference Calls (ECC) Example: 
-
+Earning Conference Calls (ECC) Example
+--------
 .. image:: ./figures/ecc_example.png
    :width: 60%
    :align: center
@@ -20,7 +22,8 @@ in the following two days. The entire ECC is saved as a ".mp3/.wav" audio file, 
     - Long Audio: The audio of the ECC is long, typically lasting 30-60 minutes, which makes it challenging to analyze the entire audio in one go.
     - Long Transcript: The transcript of the ECC is also long, often exceeding 200+ sentence, which requires efficient processing and analysis method.
 
-- ECC Analyzer:
+ECC Analyzer:
+--------
 .. image:: ./figures/ecc_analyzer.png
    :width: 80%
    :align: center
