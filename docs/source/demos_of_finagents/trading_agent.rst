@@ -1,12 +1,11 @@
 ========================================================================
 Trading Agent
 ========================================================================
+In investing, generating alpha signals is crucial for making informed decisions. However, individual investors typically lack the time, resources, or professional knowledge to extract actionable signals from vast amounts of financial information. Imagine being able to ask Warren Buffett for value-investing advice, consult a risk manager to flag red flags in SEC filings, or engage a sentiment analyst to interpret the tone of market news — all instantly and on demand. **AI agents** make this possible. These LLM-powered agents, such as Warren Buffett agent, sentiment analysis agent, and risk management agent, emulate a professional investment team — personalized and accessible to any investor.
 
-In financial markets, decision-making depends not only on numerical data (e.g., price, volume, market indicators), but also on unstructured financial documents (e.g., financial news and SEC filings). The structured time-series numerical data is important for quantitative trading to model market dynamics. Financial documents contain valuable information about market sentiment, risk, and events. LLMs have demonstrated strong capabilities in processing and understanding unstructured text, making them promosing for extracting signals from financial documents.
+Here we show a trading agent, which uses LLM-generated signals from financial news and Financial Reinforcement Learning (FinRL) to enhance trading strategies.
 
-The trading agent integrates LLM-generated signals from financial news in Financial Reinforcement Learning (FinRL) to enhance trading strategies.
-
-  - **LLM for Seeking Alpha**. LLMs are used to analyze financail documents and generate  trading signals, such as sentiment scores and risk levels.
+  - **LLM for Seeking Alpha**. LLMs are used to analyze financial news and generate  trading signals, such as sentiment scores and risk levels.
   - **Stock Trading with RL**. These extracted signals are then integrated into the FinRL environment. The trading agent learns optimal trading strategies from both numerical and textual data.
 
 LLM for Seeking Alpha
