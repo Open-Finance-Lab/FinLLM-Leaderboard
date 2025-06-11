@@ -1,7 +1,7 @@
 ========================================================================
 Trading Agent
 ========================================================================
-In investing, generating alpha signals is crucial for making informed decisions. However, individual investors typically lack the time, resources, or professional knowledge to extract actionable signals from vast amounts of financial information. Imagine being able to ask Warren Buffett for value-investing advice, consult a risk manager to flag red flags in SEC filings, or engage a sentiment analyst to interpret the tone of market news — all instantly and on demand. **AI agents** make this possible. These LLM-powered agents, such as Warren Buffett agent, sentiment analysis agent, and risk management agent, form a professional investment team — personalized and accessible to any investor.
+In investing, generating alpha signals is crucial for making informed decisions. However, individual investors typically lack the time, resources, or professional knowledge to extract actionable signals from vast amounts of financial information. Imagine being able to ask Warren Buffett for value-investing advice, consult a risk manager to flag red flags in SEC filings, or engage a sentiment analyst to interpret the tone of market news — all timely and on demand. **AI agents** make this possible. These LLM-powered agents, such as Warren Buffett agent, sentiment analysis agent, and risk management agent, form a professional investment team, which is personalized and accessible to any investor.
 
 Here we show a trading agent, which uses LLM-generated signals from financial news and Financial Reinforcement Learning (FinRL) to enhance trading strategies.
 
