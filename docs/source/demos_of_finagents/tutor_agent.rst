@@ -2,11 +2,32 @@
 Tutor Agent
 ========================================================================
 
-The FinGPT Tutor Agent is an intelligent financial education assistant that provides personalized learning support, real-time Q&A, and practice question generation for students and professionals.
+The FinGPT Tutor Agent is an intelligent financial education assistant powered by pretrained large language models. It aims to democratize financial education by providing affordable, scalable, and high-quality learning support to the general public.
 
 .. image:: ./figures/tutor_agent_challenges.png
    :width: 100%
    :align: center
+   
+Motivation
+----------
+
+**Affordable**
+    - Providing affordable access to expensive tutoring services
+    - Reducing the cost per student through AI automation
+    - Making high-quality financial education accessible to everyone
+    - Cost-effective deployment using pretrained LLMs
+
+**Scalable**
+    - Serving millions of users simultaneously
+    - Available 24/7 without geographical limitations
+    - Consistent quality of education across all users
+    - Automated grading and feedback for massive student populations
+
+**Democratizing Education**
+    - Breaking down barriers to financial knowledge
+    - Enabling self-learning for people from all backgrounds
+    - Providing equal access to educational resources
+    - Supporting diverse learning needs and styles
 
 Features
 --------
@@ -35,6 +56,10 @@ A software engineer needs to quickly learn financial terms (Market Cap, EBITDA, 
 
 **Research Advisor**
 An online student pursuing independent research in finance but lacks access to academic advisors. The AI tutor helps identify unexplored research areas, outlines research phases, and provides ongoing feedback throughout the research process.
+
+**CFA Exam Preparation**
+A CFA candidate preparing for Level II faces challenges with complex financial concepts and time management. The AI tutor can provide 24/7 access to expert-level explanations of complex topics, generate practice questions tailored to weak areas, and offer step-by-step solutions for quantitative problems.
+
 
 .. image:: ./figures/tutor_agent_framework.png
    :width: 100%
