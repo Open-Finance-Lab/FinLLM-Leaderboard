@@ -18,6 +18,7 @@ OpenFinLLM Leaderboard Documentation documentation
    datasets/index
    tutorials/index
    use_cases/index
+   benchmarks/index
    demos_of_finagents/index
    frequently_asked/index
 
