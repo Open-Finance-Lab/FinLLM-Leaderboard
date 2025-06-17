@@ -1,3 +1,3 @@
-What is the unique challenge to the model?
+What unique challenges does finance put on the models?
 ========================================
 

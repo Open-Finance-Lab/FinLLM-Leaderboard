@@ -1,3 +1,3 @@
-Do I choose pretrained, finetuned or API?
-=======================================
+Should I choose pretraining, fine tuning or calling APIs?
+==============================================================================
 

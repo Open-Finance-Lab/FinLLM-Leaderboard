@@ -1,3 +1,3 @@
-What's the potential of reasoning model?
-======================================
+What’s the potential of reasoning models in finance?
+============================================================================
 

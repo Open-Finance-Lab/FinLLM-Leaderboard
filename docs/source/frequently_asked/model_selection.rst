@@ -1,3 +1,3 @@
-Can we use general purpose model or have to use financial enhanced one?
-===================================================================
+Can we use a general purpose model or have to use a financially enhanced one?
+=============================================================================================
 

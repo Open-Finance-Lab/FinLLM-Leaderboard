@@ -1,3 +1,3 @@
-What's the motivation for the financial enhanced model?
-===================================================
+What’s the motivation for fintuning a model with financial data?
+=============================================================================
 
