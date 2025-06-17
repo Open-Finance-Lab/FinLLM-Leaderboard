@@ -1,5 +1,5 @@
 ==========================
-Demos of FinAgents
+FinAgents Demos
 ==========================
 
 .. toctree::
