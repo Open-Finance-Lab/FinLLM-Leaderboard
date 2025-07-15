@@ -1,5 +1,5 @@
 ==========================
-Financial Datasets
+Overview
 ==========================
 
 .. list-table:: Dataset Categories
@@ -31,11 +31,6 @@ Financial Datasets
      - Makes informed financial decisions using multimodal inputs.
      - FinTrade
 
-.. toctree::
-   :maxdepth: 2
-
-   bloomberggpt/index
-   others/index
 
 
 

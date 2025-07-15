@@ -20,12 +20,38 @@ OpenFinLLM Leaderboard Documentation documentation
 
 .. toctree::
    :maxdepth: 2
+   :caption: Tutorials
+
+   tutorials/install_cuda
+   tutorials/deepseek_api
+   tutorials/get_api_keys
+   tutorials/benchmark_deepseek_zeroshot_guide
+   tutorials/benchmark_deepseek_rag_guide
+   tutorials/benchmark_deepseek_fewshot_guide
+   tutorials/benchmark_zeroshot_guide
+   tutorials/benchmark_zeroshot_api_guide
+   tutorials/evaluation_framework
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Financial Question Trees
 
    datasets/index
-   tutorials/index
+   datasets/bloomberggpt/index
+   datasets/others/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Use Case Exploration
+
    use_cases/index
-   benchmarks/index
    demos_of_finagents/index
+   benchmarks/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Support & Community
+
    frequently_asked/index
    author_contributions
 
