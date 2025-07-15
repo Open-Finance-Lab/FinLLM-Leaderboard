@@ -40,7 +40,7 @@ Install Cuda
    a. Visit `CUDA Toolkit Archive <https://developer.nvidia.com/cuda-toolkit-archive>`_
    b. Select version matching your framework requirements:
 
-    .. image:: /basics_setup/images/Archive.png
+    .. image:: /tutorials/images/Archive.png
        :align: center
        :class: custom-img
 
@@ -56,23 +56,23 @@ Install Cuda
    a. Visit `cuDNN Toolkit Archive <https://developer.nvidia.com/rdp/cudnn-archive>`_
 
    Download
-    .. image:: /basics_setup/images/cudnn_archive.png
+    .. image:: /tutorials/images/cudnn_archive.png
        :align: center
        :class: custom-img
 
-    .. image:: /basics_setup/images/cudnn_zip.png
+    .. image:: /tutorials/images/cudnn_zip.png
        :align: center
        :class: custom-img
 
     **Unzip everything from cuDNN zip to your local CUDA directory**
 
-    .. image:: /basics_setup/images/cudnn_files.png
+    .. image:: /tutorials/images/cudnn_files.png
        :align: center
        :class: custom-img
 
     **Create Environment Variables**
 
-    .. image:: /basics_setup/images/env_var.png
+    .. image:: /tutorials/images/env_var.png
        :align: center
        :class: custom-img
 
