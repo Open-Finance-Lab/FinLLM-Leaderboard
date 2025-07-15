@@ -1,8 +1,90 @@
+/* Custom styles for OpenFinLLM Leaderboard Documentation */
+
+/* Make content area use full width - comprehensive approach */
+.wy-nav-content {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Alternative content containers */
+.wy-grid-for-nav {
+    max-width: none !important;
+}
+
+/* Document content area */
+.document {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Main content wrapper */
+.wy-grid-for-nav .wy-nav-content-wrap {
+    max-width: none !important;
+}
+
+/* Content area within the grid */
+.wy-grid-for-nav .wy-nav-content {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Ensure all content sections use full width */
+.section {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Override any potential width restrictions */
+.wy-body-for-nav {
+    max-width: none !important;
+}
+
+/* Specific overrides for different page types */
+.wy-nav-content .document,
+.wy-nav-content .section,
+.wy-nav-content .body {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Ensure tables and other elements don't get constrained */
+.wy-nav-content table,
+.wy-nav-content .list-table,
+.wy-nav-content .figure {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Custom image styling */
 .custom-img {
     margin-bottom: 20px !important;
 }
 
+/* TOC tree styling */
 .toctree-wrapper ul ul{
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+}
+
+/* Responsive design for better mobile experience */
+@media (max-width: 768px) {
+    .wy-nav-content {
+        padding: 1rem !important;
+    }
+    
+    .wy-nav-content .document,
+    .wy-nav-content .section {
+        padding: 0.5rem !important;
+    }
+}
+
+/* Force full width for all future pages */
+.wy-nav-content * {
+    max-width: none !important;
+}
+
+/* Specific override for any remaining width constraints */
+.wy-nav-content .wy-grid-for-nav {
+    max-width: none !important;
+    width: 100% !important;
 }
