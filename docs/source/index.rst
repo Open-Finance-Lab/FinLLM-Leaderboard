@@ -14,7 +14,7 @@ OpenFinLLM Leaderboard Documentation documentation
 .. toctree::
    :maxdepth: 2
 
-   overview/index
+   overview/introduction
    datasets/index
    tutorials/index
    use_cases/index
