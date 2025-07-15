@@ -14,12 +14,13 @@ OpenFinLLM Leaderboard Documentation documentation
 .. toctree::
    :maxdepth: 2
 
-   overview/introduction
+   user/introduction
    datasets/index
    tutorials/index
    use_cases/index
    benchmarks/index
    demos_of_finagents/index
    frequently_asked/index
+   author_contributions
 
 
