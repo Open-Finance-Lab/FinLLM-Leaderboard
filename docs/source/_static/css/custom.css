@@ -75,12 +75,13 @@ input[type="color"], input[type="date"], input[type="datetime-local"], input[typ
     border-radius: 18px;
     box-shadow: 0px 10px 36px -10px rgba(0, 0, 0, 0.53);
     padding-bottom: 0;
-    height: auto !important;
+    height: calc(100vh - 36px) !important;
     max-height: calc(100vh - 36px) !important;
     position: fixed !important;
     top: 18px !important;
     left: 8px !important;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* Ensure content area starts from top */
@@ -390,10 +391,11 @@ hr {
 
 /* Additional navigation improvements */
 .wy-menu-vertical {
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 180px);
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: rgba(155, 155, 155, 0.3) transparent;
+    padding-bottom: 20px;
 }
 
 /* Ensure navigation stays visible during scroll */
@@ -404,6 +406,19 @@ hr {
     bottom: 18px !important;
     overflow-y: auto;
     overflow-x: hidden;
+    height: calc(100vh - 36px) !important;
+}
+
+/* Ensure bottom navigation items are visible */
+.wy-menu-vertical li:last-child {
+    margin-bottom: 20px;
+}
+
+/* Add some space at the bottom of navigation */
+.wy-menu-vertical::after {
+    content: '';
+    display: block;
+    height: 20px;
 }
 
 .wy-menu-vertical::-webkit-scrollbar {
