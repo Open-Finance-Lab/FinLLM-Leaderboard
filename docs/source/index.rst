@@ -50,9 +50,9 @@ OpenFinLLM Leaderboard Documentation documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Support & Community
+   :caption: Industry Collaboration
 
    frequently_asked/index
-   author_contributions
+   contributions
 
 
