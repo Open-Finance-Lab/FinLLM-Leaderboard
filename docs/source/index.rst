@@ -34,11 +34,18 @@ OpenFinLLM Leaderboard Documentation documentation
    tutorials/evaluation_framework
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Financial Question Trees
 
    datasets/index
    datasets/bloomberggpt/index
+   datasets/information_extraction/index
+   datasets/textual_analysis/index
+   datasets/question_answering/index
+   datasets/text_generation/index
+   datasets/risk_management/index
+   datasets/forecasting/index
+   datasets/decision_making/index
    datasets/others/index
 
 .. toctree::

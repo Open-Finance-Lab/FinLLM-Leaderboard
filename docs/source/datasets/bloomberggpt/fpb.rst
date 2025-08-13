@@ -57,7 +57,7 @@ Below is a sample from the dataset (available on `HuggingFace <https://huggingfa
 Task Description
 =====================
 Sentiment Classification
------------------------
+---------------------------
 - **Input**: Financial news sentence (e.g., "Profit surged by 20% due to strong demand")
 - **Output**: Sentiment label (Positive/Negative/Neutral)
 - **Challenge**: Financial language often requires domain knowledge (e.g., "dividend cut" is negative, while "cost reduction" may be positive)

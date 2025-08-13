@@ -16,10 +16,11 @@
     color: #9b9b9b;
     background: #343131;
     z-index: 200;
-    margin: 18px 8px;
+    margin: 0 !important;
     border-radius: 18px;
     box-shadow: 0px 10px 36px -10px rgba(0, 0, 0, 0.53);
-    padding-bottom:0;
+    padding-bottom: 0;
+    position: relative !important;
 }
 
 .wy-side-nav-search {
@@ -40,12 +41,74 @@ input[type="color"], input[type="date"], input[type="datetime-local"], input[typ
 @media screen and (min-width: 1600px) {
     .rst-content {
         max-width: 900px !important;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
+        margin: 0 auto;
         padding-bottom: 40px;
     }
+}
+
+/* Fix layout issues */
+.wy-nav-content-wrap {
+    background-color: #f9fafb;
+    min-height: 100vh;
+}
+
+.wy-nav-content {
+    max-width: 100% !important;
+    background: none;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Ensure proper content positioning */
+.rst-content {
+    padding-top: 20px;
+    margin-top: 0;
+}
+
+/* Fix navigation bar height affecting content */
+.wy-nav-side {
+    min-height: 90%;
+    color: #9b9b9b;
+    background: #343131;
+    z-index: 200;
+    margin: 18px 8px;
+    border-radius: 18px;
+    box-shadow: 0px 10px 36px -10px rgba(0, 0, 0, 0.53);
+    padding-bottom: 0;
+    height: auto !important;
+    max-height: calc(100vh - 36px) !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+}
+
+/* Ensure content area starts from top */
+.wy-grid-for-nav {
+    min-height: 100vh;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.wy-body {
+    min-height: 100vh;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Fix sticky header positioning */
+.rst-content > div:first-child {
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px 16px 14px;
+    border-radius: 18px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255,255,255,.5);
+    margin-bottom: 24px;
+    box-shadow: rgba(0,0,0,.1) 0px 3px 12px;
+    z-index: 100;
+    margin-top: 0 !important;
 }
 
 .figure {
@@ -187,4 +250,231 @@ hr {
 
 .rst-footer-buttons {
     margin-top: 40px;
+}
+
+/* Navigation improvements */
+.wy-menu-vertical li.toctree-l1 > a {
+    position: relative;
+}
+
+
+
+/* Collapsible navigation sections */
+.wy-menu-vertical li.toctree-l1 > ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.wy-menu-vertical li.toctree-l1.current > ul,
+.wy-menu-vertical li.toctree-l1:hover > ul {
+    max-height: 1000px;
+}
+
+/* Navigation scroll indicator */
+.wy-nav-side {
+    position: relative;
+}
+
+.wy-nav-side::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 4px;
+    background: rgba(155, 155, 155, 0.3);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wy-nav-side:hover::after,
+.wy-nav-side.has-scroll::after {
+    opacity: 1;
+}
+
+
+
+/* Smooth scrolling for navigation */
+.wy-menu-vertical {
+    scroll-behavior: smooth;
+}
+
+/* Navigation item hover effects */
+.wy-menu-vertical li.toctree-l1 > a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin: 2px 4px;
+    padding-left: 8px;
+}
+
+/* Sub-navigation styling */
+.wy-menu-vertical li.toctree-l2 > a {
+    padding-left: 20px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.wy-menu-vertical li.toctree-l2 > a:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    margin: 1px 8px;
+}
+
+/* Category headers styling */
+.wy-menu-vertical li.toctree-l1 > a {
+    font-weight: 500;
+    border-bottom: 1px solid rgba(155, 155, 155, 0.1);
+    margin-bottom: 2px;
+}
+
+/* Active state styling */
+.wy-menu-vertical li.toctree-l1.current > a,
+.wy-menu-vertical li.toctree-l2.current > a {
+    background-color: rgba(39, 174, 96, 0.2);
+    border-left: 3px solid #27ae60;
+    padding-left: 13px;
+}
+
+/* Enhanced navigation states */
+.wy-menu-vertical li.toctree-l1.expanded > ul {
+    max-height: 1000px;
+}
+
+/* Scroll indicator for long navigation */
+.wy-nav-side.scrollable::after {
+    opacity: 1;
+}
+
+/* Search highlight */
+.wy-menu-vertical li.search-highlight > a {
+    background-color: rgba(255, 255, 0, 0.2);
+    border-radius: 4px;
+}
+
+/* Focus states for accessibility */
+.wy-menu-vertical li > a:focus {
+    outline: 2px solid #27ae60;
+    outline-offset: -2px;
+}
+
+/* Mobile responsive improvements */
+@media screen and (max-width: 768px) {
+    .wy-menu-vertical li.toctree-l1 > a {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+    
+    .wy-menu-vertical li.toctree-l2 > a {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+    .wy-nav-side {
+        margin: 10px 5px;
+        border-radius: 12px;
+    }
+}
+
+/* Additional navigation improvements */
+.wy-menu-vertical {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.3) transparent;
+}
+
+.wy-menu-vertical::-webkit-scrollbar {
+    width: 6px;
+}
+
+.wy-menu-vertical::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.wy-menu-vertical::-webkit-scrollbar-thumb {
+    background: rgba(155, 155, 155, 0.3);
+    border-radius: 3px;
+}
+
+.wy-menu-vertical::-webkit-scrollbar-thumb:hover {
+    background: rgba(155, 155, 155, 0.5);
+}
+
+/* Category separators */
+.wy-menu-vertical li.toctree-l1:not(:last-child) {
+    border-bottom: 1px solid rgba(155, 155, 155, 0.1);
+}
+
+/* Hover effects for better UX */
+.wy-menu-vertical li.toctree-l1 > a:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.wy-menu-vertical li.toctree-l2 > a:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+}
+
+/* Additional layout fixes */
+.wy-body {
+    min-height: 100vh;
+}
+
+.wy-grid-for-nav {
+    min-height: 100vh;
+}
+
+/* Ensure content starts at the top */
+.wy-nav-content {
+    padding-top: 0 !important;
+}
+
+/* Fix any potential margin issues */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure proper spacing for the first content element */
+.rst-content > div:first-child {
+    margin-top: 0;
+}
+
+/* Additional fixes for content alignment */
+.wy-nav-content {
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Override any default margins that might cause content shift */
+.wy-body-for-nav {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Ensure the main content container starts from the very top */
+.wy-grid-for-nav .wy-nav-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Fix the grid layout to prevent content shift */
+.wy-grid-for-nav {
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+/* Ensure navigation doesn't push content down */
+.wy-nav-side {
+    flex-shrink: 0 !important;
+}
+
+.wy-nav-content {
+    flex: 1 !important;
+    margin-left: 0 !important;
 }

@@ -1,5 +1,5 @@
 Other Datasets
-=============
+===============
 
 This section contains additional financial datasets used in the OpenFinLLM Leaderboard evaluation.
 

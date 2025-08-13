@@ -8,7 +8,7 @@ First, the company’s CEO/CFO highlights
 the quarterly financial status, strategic initiatives, and forward-looking plans. Then, analysts and investors ask questions in the Q&A sessions. The release of ECCs is correlated with market reactions, making them an important resource for analyzing market changes.
 
 Earning Conference Calls (ECC) Example
---------
+--------------------------------------
 .. image:: ./figures/ecc_example.png
    :width: 60%
    :align: center
@@ -23,7 +23,7 @@ in the following two days. The entire ECC is saved as a ".mp3/.wav" audio file, 
     - Long Transcript: The transcript of the ECC is also long, often exceeding 200+ sentence, which requires efficient processing and analysis method.
 
 ECC Analyzer:
---------
+---------------
 .. image:: ./figures/ecc_analyzer.png
    :width: 80%
    :align: center

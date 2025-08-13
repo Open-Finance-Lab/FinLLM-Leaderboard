@@ -52,6 +52,10 @@ html_css_files = [
     'css/custom.css',
 ]
 
+html_js_files = [
+    'js/navigation.js',
+]
+
 html_context = {
     "display_github": True, # Integrate GitHub
     "github_user": "Open-Finance-Lab", # Username

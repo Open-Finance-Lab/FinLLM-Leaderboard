@@ -13,7 +13,7 @@ Feature
 - improve accuracy when extracting information from XBRL documents
 
 The Potential of XBRL Agent for Compliance
---------
+-------------------------------------------
 - Saves Time and Reduces Human Error
 - Makes Financial Reports Clear and Consistent
 - Accelerates XBRL Application Development
