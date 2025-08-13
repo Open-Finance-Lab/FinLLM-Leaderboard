@@ -16,6 +16,7 @@ OpenFinLLM Leaderboard Documentation documentation
    :caption: Introduction
 
    overview/introduction
+   overview/model_list
    overview/demo
 
 .. toctree::
