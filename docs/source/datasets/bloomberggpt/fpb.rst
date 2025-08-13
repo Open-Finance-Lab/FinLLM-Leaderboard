@@ -1,6 +1,6 @@
-=====================
+===============================
 FPB (Financial PhraseBank)
-=====================
+===============================
 
 .. contents:: Table of Contents
    :local:
@@ -18,14 +18,14 @@ Description
 **FPB** is a curated collection of English sentences from financial news and corporate disclosures, annotated for sentiment polarity.
 
 Dataset Composition
-------------------
+------------------------
 - **Source**: News articles covering companies listed on the **OMX Helsinki Stock Exchange** (Finland)
 - **Time Period**: Articles collected over a multi-year span (Unspecified)
 - **Sample Size**: Approximately 5,000 sentences, filtered to ensure relevance
 - **Companies**: Broad coverage across industries including banking, manufacturing, and technology
 
 Annotation Process
------------------
+----------------------
 - **Annotators**: 16 finance professionals (researchers and Aalto University Business School graduates)
 - **Labels**: Each sentence labeled as **Positive**, **Negative**, or **Neutral** from an investor's perspective
 - **Agreement**:
@@ -55,7 +55,7 @@ Below is a sample from the dataset (available on `HuggingFace <https://huggingfa
      - positive, neutral, negative
 
 Task Description
-===============
+=====================
 Sentiment Classification
 -----------------------
 - **Input**: Financial news sentence (e.g., "Profit surged by 20% due to strong demand")
@@ -63,18 +63,18 @@ Sentiment Classification
 - **Challenge**: Financial language often requires domain knowledge (e.g., "dividend cut" is negative, while "cost reduction" may be positive)
 
 Key Use Cases
-------------
+----------------
 1. **Robo-advisors**: Automating sentiment analysis for trading signals
 2. **Academic Research**: Benchmarking NLP models in finance
 3. **Risk Management**: Monitoring news sentiment for portfolio adjustments
 
 Evaluation Metrics
-=================
+=====================
 1. **Accuracy**: Primary metric for balanced class performance
 2. **Macro-averaged F1-score**: Accounts for class imbalance (Neutral sentences dominate)
 
 Why Use FPB?
-===========
+==============
 - **Domain-Specific**: Tailored for finance, unlike generic sentiment datasets (e.g., IMDB, Yelp)
 - **Rigorous Annotation**: Expert-labeled with high agreement, reducing noise
 - **Publicly Available**: Freely accessible for non-commercial research
