@@ -40,8 +40,8 @@ input[type="color"], input[type="date"], input[type="datetime-local"], input[typ
 
 @media screen and (min-width: 1600px) {
     .rst-content {
-        max-width: 900px !important;
-        margin: 0 auto;
+        max-width: 100% !important;
+        margin: 0;
         padding-bottom: 40px;
     }
 }
@@ -89,7 +89,8 @@ input[type="color"], input[type="date"], input[type="datetime-local"], input[typ
     min-height: 100vh;
     margin-top: 0 !important;
     padding-top: 0 !important;
-    margin-left: 320px !important; /* Adjust based on navigation width */
+    margin-left: 0 !important; /* Remove left margin to use full width */
+    margin-right: 0 !important; /* Remove right margin to use full width */
 }
 
 .wy-body {
@@ -216,10 +217,9 @@ th {
 	text-decoration: none;
 	font-weight: 400;
     box-shadow: none;
-	outline-none: false;
+	outline: none;
 	vertical-align: middle;
-	*display: inline;
-	zoom: 1;
+	display: inline-block;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -251,8 +251,74 @@ hr {
     display: none;
 }
 
+/* Fixed navigation buttons positioning */
 .rst-footer-buttons {
-    margin-top: 40px;
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    background: transparent !important;
+    padding: 15px 20px !important;
+    margin: 0 !important;
+}
+
+/* Ensure proper spacing for content above fixed buttons */
+.rst-content {
+    padding-bottom: 100px !important;
+}
+
+/* Style the navigation buttons */
+.rst-footer-buttons .btn {
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.rst-footer-buttons .btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Previous button - left side */
+.rst-footer-buttons .btn-prev {
+    float: left !important;
+}
+
+/* Next button - right side */
+.rst-footer-buttons .btn-next {
+    float: right !important;
+}
+
+/* Ensure buttons are properly spaced */
+.rst-footer-buttons::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Handle single button cases */
+.rst-footer-buttons .btn-prev:only-child,
+.rst-footer-buttons .btn-next:only-child {
+    float: none !important;
+    display: block !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+/* Ensure buttons don't overlap with sidebar */
+@media screen and (min-width: 769px) {
+    .rst-footer-buttons {
+        left: 300px !important; /* Account for sidebar width */
+        right: 20px !important;
+    }
+}
+
+/* Ensure proper spacing when buttons are fixed */
+.wy-nav-content {
+    padding-bottom: 80px !important;
 }
 
 /* Navigation improvements */
@@ -387,6 +453,117 @@ hr {
     .wy-grid-for-nav {
         margin-left: 0 !important;
     }
+    
+    .wy-nav-content {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    .rst-content {
+        padding: 0 10px 20px 10px !important;
+    }
+    
+    /* Mobile navigation buttons */
+    .rst-footer-buttons {
+        padding: 10px 15px !important;
+        bottom: 10px !important;
+    }
+    
+    .rst-footer-buttons .btn {
+        padding: 8px 15px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* Large screen optimizations */
+@media screen and (min-width: 1200px) {
+    .wy-nav-content {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    
+    .rst-content {
+        padding: 0 40px 40px 40px !important;
+    }
+}
+
+/* Extra large screen optimizations */
+@media screen and (min-width: 1600px) {
+    .wy-nav-content {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+    
+    .rst-content {
+        padding: 0 60px 40px 60px !important;
+    }
+}
+
+/* Code block responsive design */
+@media screen and (max-width: 768px) {
+    .rst-content div[class^="highlight"],
+    .rst-content div[class*=" highlight"],
+    .rst-content .highlight,
+    .rst-content .code-block,
+    .rst-content pre {
+        font-size: 0.9em !important;
+        padding: 10px !important;
+    }
+    
+    .rst-content div[class^="highlight"] pre,
+    .rst-content div[class*=" highlight"] pre,
+    .rst-content .highlight pre,
+    .rst-content .code-block pre,
+    .rst-content pre code {
+        font-size: 0.9em !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* Ensure code blocks maintain readability on all screen sizes */
+.rst-content div[class^="highlight"]:hover,
+.rst-content div[class*=" highlight"]:hover,
+.rst-content .highlight:hover,
+.rst-content .code-block:hover {
+    overflow-x: auto !important;
+}
+
+/* Add smooth scrolling for code blocks */
+.rst-content div[class^="highlight"],
+.rst-content div[class*=" highlight"],
+.rst-content .highlight,
+.rst-content .code-block {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.3) transparent;
+}
+
+.rst-content div[class^="highlight"]::-webkit-scrollbar,
+.rst-content div[class*=" highlight"]::-webkit-scrollbar,
+.rst-content .highlight::-webkit-scrollbar,
+.rst-content .code-block::-webkit-scrollbar {
+    height: 6px;
+}
+
+.rst-content div[class^="highlight"]::-webkit-scrollbar-track,
+.rst-content div[class*=" highlight"]::-webkit-scrollbar-track,
+.rst-content .highlight::-webkit-scrollbar-track,
+.rst-content .code-block::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.rst-content div[class^="highlight"]::-webkit-scrollbar-thumb,
+.rst-content div[class*=" highlight"]::-webkit-scrollbar-thumb,
+.rst-content .highlight::-webkit-scrollbar-thumb,
+.rst-content .code-block::-webkit-scrollbar-thumb {
+    background: rgba(155, 155, 155, 0.3);
+    border-radius: 3px;
+}
+
+.rst-content div[class^="highlight"]::-webkit-scrollbar-thumb:hover,
+.rst-content div[class*=" highlight"]::-webkit-scrollbar-thumb:hover,
+.rst-content .highlight::-webkit-scrollbar-thumb:hover,
+.rst-content .code-block::-webkit-scrollbar-thumb:hover {
+    background: rgba(155, 155, 155, 0.5);
 }
 
 /* Additional navigation improvements */
@@ -495,12 +672,92 @@ body {
 .wy-grid-for-nav .wy-nav-content {
     margin-top: 0 !important;
     padding-top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Ensure content uses full available width */
+.rst-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 20px 40px 20px !important;
+}
+
+/* Override any theme default width restrictions */
+.wy-nav-content {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Ensure all content containers use full width */
+.wy-body-for-nav .wy-nav-content {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Override any potential theme restrictions */
+.wy-grid-for-nav .wy-nav-content {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Code block width and overflow handling */
+.rst-content div[class^="highlight"],
+.rst-content div[class*=" highlight"],
+.rst-content .highlight,
+.rst-content .code-block,
+.rst-content pre {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+}
+
+/* Code block content */
+.rst-content div[class^="highlight"] pre,
+.rst-content div[class*=" highlight"] pre,
+.rst-content .highlight pre,
+.rst-content .code-block pre,
+.rst-content pre code {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+    box-sizing: border-box !important;
+}
+
+/* Code block captions */
+.rst-content .code-block-caption {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+}
+
+/* Inline code */
+.rst-content code {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+}
+
+/* Ensure code blocks don't overflow their containers */
+.rst-content div[class^="highlight"]:not(.highlight),
+.rst-content div[class*=" highlight"]:not(.highlight) {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    border-radius: 8px !important;
+    margin: 1em 0 !important;
 }
 
 /* Fix the grid layout to prevent content shift */
 .wy-grid-for-nav {
     display: flex !important;
     align-items: flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 /* Ensure navigation doesn't push content down */
@@ -511,4 +768,8 @@ body {
 .wy-nav-content {
     flex: 1 !important;
     margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
 }

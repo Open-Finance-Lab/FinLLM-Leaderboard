@@ -1,6 +1,7 @@
 Demo
 ======
-
+Open FinLLM Leaderboard Demo on Hugging Face Spaces: https://finosfoundation-open-financial-llm-leaderboard.hf.space/      
+-----------------------------------------------------------------------------------------------------------------------------
 .. raw:: html
 
     <iframe 
