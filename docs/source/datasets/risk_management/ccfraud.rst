@@ -1,4 +1,4 @@
-CCFraud Dataset
+CCFraud
 ===============
 
 To be added

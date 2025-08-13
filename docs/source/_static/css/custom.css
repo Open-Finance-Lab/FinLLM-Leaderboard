@@ -77,9 +77,10 @@ input[type="color"], input[type="date"], input[type="datetime-local"], input[typ
     padding-bottom: 0;
     height: auto !important;
     max-height: calc(100vh - 36px) !important;
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
+    position: fixed !important;
+    top: 18px !important;
+    left: 8px !important;
+    overflow-y: auto;
 }
 
 /* Ensure content area starts from top */
@@ -87,6 +88,7 @@ input[type="color"], input[type="date"], input[type="datetime-local"], input[typ
     min-height: 100vh;
     margin-top: 0 !important;
     padding-top: 0 !important;
+    margin-left: 320px !important; /* Adjust based on navigation width */
 }
 
 .wy-body {
@@ -376,6 +378,13 @@ hr {
     .wy-nav-side {
         margin: 10px 5px;
         border-radius: 12px;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+    }
+    
+    .wy-grid-for-nav {
+        margin-left: 0 !important;
     }
 }
 
@@ -385,6 +394,16 @@ hr {
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: rgba(155, 155, 155, 0.3) transparent;
+}
+
+/* Ensure navigation stays visible during scroll */
+.wy-nav-side {
+    position: fixed !important;
+    top: 18px !important;
+    left: 8px !important;
+    bottom: 18px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .wy-menu-vertical::-webkit-scrollbar {

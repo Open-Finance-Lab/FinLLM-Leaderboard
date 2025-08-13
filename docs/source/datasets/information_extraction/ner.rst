@@ -1,4 +1,4 @@
-NER Dataset
+NER
 ===========
 
 To be added

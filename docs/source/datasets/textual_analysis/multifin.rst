@@ -1,4 +1,4 @@
-MultiFin Dataset
+MultiFin
 ================
 
 To be added

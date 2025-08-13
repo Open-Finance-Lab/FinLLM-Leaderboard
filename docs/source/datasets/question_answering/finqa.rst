@@ -1,4 +1,4 @@
-FinQA Dataset
+FinQA
 ================
 
 To be added

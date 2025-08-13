@@ -1,4 +1,4 @@
-TATQA Dataset
+TATQA
 ===============
 
 To be added

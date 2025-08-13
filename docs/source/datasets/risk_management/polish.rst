@@ -1,4 +1,4 @@
-Polish Dataset
+Polish
 ===============
 
 To be added

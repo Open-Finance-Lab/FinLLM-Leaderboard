@@ -1,4 +1,4 @@
-LendingClub Dataset
+LendingClub
 ======================
 
 To be added

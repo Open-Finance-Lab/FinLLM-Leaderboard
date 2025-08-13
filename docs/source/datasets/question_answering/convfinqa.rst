@@ -1,4 +1,4 @@
-ConvFinQA Dataset
+ConvFinQA
 =================
 
 To be added

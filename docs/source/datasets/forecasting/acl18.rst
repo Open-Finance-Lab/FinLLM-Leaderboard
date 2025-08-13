@@ -1,4 +1,4 @@
-ACL18 Dataset
+ACL18
 =============
 
 To be added

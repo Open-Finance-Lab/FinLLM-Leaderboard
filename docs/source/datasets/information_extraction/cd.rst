@@ -1,4 +1,4 @@
-CD Dataset
+CD
 ==========
 
 To be added

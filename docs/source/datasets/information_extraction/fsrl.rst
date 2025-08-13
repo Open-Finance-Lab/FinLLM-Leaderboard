@@ -1,4 +1,4 @@
-FSRL Dataset
+FSRL
 ================
 
 To be added

@@ -1,4 +1,4 @@
-TravelInsurance Dataset
+TravelInsurance
 ========================
 
 To be added

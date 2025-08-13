@@ -1,4 +1,4 @@
-SC Dataset
+SC
 =============
 
 To be added

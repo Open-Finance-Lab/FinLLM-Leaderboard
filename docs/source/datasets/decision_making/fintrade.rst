@@ -1,4 +1,4 @@
-FinTrade Dataset
+FinTrade
 ================
 
 To be added

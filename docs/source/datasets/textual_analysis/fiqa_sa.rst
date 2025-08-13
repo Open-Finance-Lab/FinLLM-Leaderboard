@@ -1,4 +1,4 @@
-FiQA-SA Dataset
+FiQA-SA
 ===============
 
 To be added

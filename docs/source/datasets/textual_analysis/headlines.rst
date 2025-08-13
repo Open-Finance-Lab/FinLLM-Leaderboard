@@ -1,4 +1,4 @@
-Headlines Dataset
+Headlines
 ==================
 
 To be added

@@ -1,4 +1,4 @@
-CIKM18 Dataset
+CIKM18
 =================
 
 To be added

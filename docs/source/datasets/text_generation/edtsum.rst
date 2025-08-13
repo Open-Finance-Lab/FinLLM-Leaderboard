@@ -1,4 +1,4 @@
-EDTSUM Dataset
+EDTSUM
 ==============
 
 To be added

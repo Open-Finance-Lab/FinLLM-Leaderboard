@@ -1,4 +1,4 @@
-FinRED Dataset
+FinRED
 ================
 
 To be added

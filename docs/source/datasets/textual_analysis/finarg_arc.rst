@@ -1,4 +1,4 @@
-FinArg-ARC Dataset
+FinArg-ARC
 ==================
 
 To be added
