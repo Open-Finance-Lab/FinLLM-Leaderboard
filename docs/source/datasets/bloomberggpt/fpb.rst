@@ -2,6 +2,11 @@
 FPB (Financial PhraseBank)
 ===============================
 
+.. raw:: html
+   :file: images/fpb_sentiment_analysis_diagram.html
+
+**Figure 1.** A sample financial sentiment analysis task from the FPB dataset. To solve it, financial professionals engage in systematic evaluation (middle panel): guided by domain knowledge, they identify key financial indicators and assess their investor implications. While DeepSeek correctly recognizes cost reduction as positive, it demonstrates strong domain understanding by systematically analyzing cost efficiency, technological advantages, and operational benefits, highlighting the importance of specialized knowledge in financial text analysis.
+
 .. contents:: Table of Contents
    :local:
 

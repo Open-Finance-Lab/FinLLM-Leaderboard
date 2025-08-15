@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Sentiment Analysis Comparison - FPB Dataset</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 2px;
+            max-width: 1600px;
+            margin: 0 auto;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #ddd;
+        }
+
+        .column {
+            padding: 16px;
+            min-height: 520px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .left-column {
+            background-color: #e3f2fd;
+            border-top: 8px solid #1976d2;
+        }
+
+        .middle-column {
+            background-color: #e8f5e8;
+            border-top: 8px solid #388e3c;
+        }
+
+        .right-column {
+            background-color: #e8f5e8;
+            border-top: 8px solid #388e3c;
+        }
+        
+        .column-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .left-column .column-title {
+            background-color: #1976d2;
+            color: white;
+        }
+        
+        .middle-column .column-title {
+            background-color: #388e3c;
+            color: white;
+        }
+        
+        .right-column .column-title {
+            background-color: #388e3c;
+            color: white;
+        }
+        
+        .question-text {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .financial-text {
+            margin: 15px 0;
+            flex-shrink: 0;
+        }
+
+        .text-box {
+            background-color: rgba(255,255,255,0.9);
+            padding: 14px;
+            border-radius: 8px;
+            border-left: 4px solid #1976d2;
+            font-style: italic;
+            font-size: 13px;
+            line-height: 1.5;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 15px;
+            flex-shrink: 0;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .option-label {
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            min-width: 70px;
+            text-align: center;
+            font-size: 13px;
+        }
+        
+        .positive { background-color: #4caf50; color: white; }
+        .neutral { background-color: #ff9800; color: white; }
+        .negative { background-color: #f44336; color: white; }
+        
+        .option-desc {
+            font-size: 12px;
+            color: #666;
+            flex: 1;
+        }
+        
+        .step {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: rgba(255,255,255,0.4);
+            border-radius: 8px;
+            border-left: 3px solid #388e3c;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #388e3c;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .step-title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .step-content {
+            margin-left: 34px;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        
+        .keyword-highlight {
+            background-color: #ffeb3b;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .sentiment-indicator {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        
+        .positive-indicator { background-color: #4caf50; color: white; }
+        .negative-indicator { background-color: #f44336; color: white; }
+        
+        .error-mark {
+            color: #d32f2f;
+            font-size: 28px;
+            font-weight: bold;
+            float: right;
+            margin-top: -10px;
+        }
+        
+        .model-analysis {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .correct-part {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .error-part {
+            color: #d32f2f;
+            font-weight: bold;
+            background-color: rgba(244, 67, 54, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #d32f2f;
+        }
+        
+        .checkmark {
+            color: #4caf50;
+            font-size: 20px;
+            font-weight: bold;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Column: Question -->
+        <div class="column left-column">
+            <div class="column-title">Financial Sentiment Analysis in FPB</div>
+            
+            <div class="question-text">
+                <strong>Task:</strong> Analyze the sentiment of the following financial news sentence from an investor's perspective:
+            </div>
+            
+            <div class="financial-text">
+                <div class="text-box">
+                    "According to Seppänen, the new technology UMTS900 solution network building costs are by one-third lower than that of the building of 3.5G networks, operating at 2,100 MHz frequency."
+                </div>
+            </div>
+            
+            <div class="question-text">
+                <strong>What is the sentiment of this statement?</strong>
+            </div>
+            
+            <div class="options">
+                <div class="option">
+                    <div class="option-label positive">A. Positive</div>
+                </div>
+                <div class="option">
+                    <div class="option-label neutral">B. Neutral</div>
+                </div>
+                <div class="option">
+                    <div class="option-label negative">C. Negative</div>
+                </div>
+            </div>
+
+            <div style="margin-top: auto; padding: 12px; background-color: rgba(255,255,255,0.6); border-radius: 6px; font-size: 12px;">
+                <strong>Dataset:</strong> Financial PhraseBank (FPB)<br>
+                <strong>Domain:</strong> Financial news sentiment analysis<br><br>
+            </div>
+        </div>
+        
+        <!-- Middle Column: Human Reasoning -->
+        <div class="column middle-column">
+            <div class="column-title">Human reasoning</div>
+            <div class="checkmark">✓</div>
+
+            <p style="font-size: 13px; margin-bottom: 12px; color: #555;">
+                Finance professionals analyze through systematic evaluation:
+            </p>
+
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">1</span>
+                    <span class="step-title">Identify Keywords:</span>
+                </div>
+                <div class="step-content">
+                    <span class="keyword-highlight">"costs are by one-third lower"</span><br>
+                    <div style="margin-top: 6px; color: #666;">
+                        Cost reduction directly impacts profitability metrics.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">2</span>
+                    <span class="step-title">Business Impact:</span>
+                </div>
+                <div class="step-content">
+                    <div style="display: flex; align-items: center; margin: 8px 0;">
+                        <div style="background-color: #4caf50; color: white; padding: 6px 10px; border-radius: 15px; font-size: 11px; font-weight: bold;">
+                            Lower costs = Higher margins
+                        </div>
+                        <div style="margin-left: 8px; color: #4caf50; font-size: 16px;">📈</div>
+                    </div>
+                    <div style="color: #666;">
+                        33% cost reduction improves ROI and competitive positioning.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">3</span>
+                    <span class="step-title">Market Context:</span>
+                </div>
+                <div class="step-content">
+                    <div style="color: #666;">
+                        UMTS900 technology advantage. Lower frequency = better coverage, reduced infrastructure costs.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <span class="step-number">4</span>
+                    <span class="step-title">Assessment:</span>
+                </div>
+                <div class="step-content">
+                    <span class="sentiment-indicator positive-indicator">POSITIVE</span><br>
+                    <em style="font-size: 11px; color: #666;">Cost efficiency + tech advancement = favorable sentiment</em>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column: Model Reasoning -->
+        <div class="column right-column">
+            <div class="column-title">Model reasoning (DeepSeek)</div>
+            <div class="checkmark">✓</div>
+
+            <div class="model-analysis" style="flex: 1;">
+                <div class="correct-part" style="margin-bottom: 12px;">
+                    <strong>Cost Efficiency:</strong> UMTS900 has building costs one-third lower than 3.5G networks. Lower costs imply higher profitability for deploying companies.
+                </div>
+
+                <div class="correct-part" style="margin-bottom: 12px;">
+                    <strong>Technological Advantage:</strong> "New technology" suggests innovation and competitive advantages. Investors view tech advancements positively, especially with cost savings.
+                </div>
+
+                <div class="correct-part" style="margin-bottom: 12px;">
+                    <strong>Operational Efficiency:</strong> 900 MHz operation may provide broader coverage, reducing operational expenses and improving service quality.
+                </div>
+
+                <div style="margin-top: auto; padding: 10px; background-color: rgba(76, 175, 80, 0.1); border-radius: 6px; border-left: 3px solid #4caf50; font-size: 13px;">
+                    <strong>Conclusion:</strong> Cost savings + technological improvements = optimistic investor view. <strong>Sentiment: Positive</strong>
+                </div>
+
+                <div style="margin-top: 15px; padding: 10px; background-color: rgba(255,255,255,0.6); border-radius: 6px; font-size: 12px;">
+                    <strong>Model Performance:</strong> Model correctly identified the positive sentiment by recognizing key financial indicators and their implications for investors.<br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
