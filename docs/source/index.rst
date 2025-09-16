@@ -36,10 +36,28 @@ OpenFinLLM Leaderboard Documentation documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Use Case Exploration
+   :caption: Real-world Use Cases
 
-   use_cases/index
-   demos_of_finagents/index
+   use_cases/simple_questions
+   use_cases/lawyer
+   use_cases/financial_document_analysis
+   use_cases/regulatory_compliance
+   use_cases/XBRL_analytics
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Finagents
+
+   demos_of_finagents/tutor_agent
+   demos_of_finagents/search_agent
+   demos_of_finagents/trading_agent
+   demos_of_finagents/XBRL_agent
+   demos_of_finagents/ECC_analyzer
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Benchmarks
+
    benchmarks/index
 
 .. toctree::
