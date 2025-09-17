@@ -56,7 +56,7 @@ OpenFinLLM Leaderboard Documentation documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Benchmarks
+   :caption: References
 
    benchmarks/index
 
