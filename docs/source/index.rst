@@ -64,12 +64,14 @@ OpenFinLLM Leaderboard Documentation documentation
    :maxdepth: 2
    :caption: Tutorials
 
+   tutorials/fpb_o3mini_evaluation
    tutorials/benchmark_deepseek_zeroshot_guide
    tutorials/benchmark_deepseek_rag_guide
    tutorials/benchmark_deepseek_fewshot_guide
    tutorials/benchmark_zeroshot_guide
    tutorials/benchmark_zeroshot_api_guide
    tutorials/evaluation_framework
+   
 
 .. toctree::
    :maxdepth: 2
