@@ -159,20 +159,6 @@ After completing the evaluation in Google Colab, you need to manually organize t
    └── tutorials_code/
        └── FPB_TestByChatGPT_o3_mini.ipynb  # Already provided
 
-Expected Output
-===============
-
-The evaluation produces several output files:
-
-**Raw Responses** (``text_responses/``)
-   - ``o3mini_fpb_responses.json`` - Complete QA pairs
-   - ``o3mini_fpb_predictions.csv`` - Extracted predictions
-
-**Evaluation Results** (``evaluation/``)
-   - ``o3mini_fpb_metrics.json`` - Accuracy, F1-scores
-   - ``o3mini_fpb_confusion_matrix.csv`` - Detailed breakdown
-   - ``o3mini_fpb_report.txt`` - Human-readable summary
-
 Reproducibility Notes
 =====================
 
