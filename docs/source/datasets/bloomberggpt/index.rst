@@ -10,4 +10,4 @@ This section contains datasets specifically related to BloombergGPT and its eval
    fiqa_sa
    headlines
    ner
-   confinqa 
+   convfinqa 
