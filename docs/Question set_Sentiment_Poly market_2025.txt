@@ -1,0 +1,352 @@
+﻿Sentimental Questions:
+Easy:
+* Q1: “NVIDIA stock surged after analysts raised their price target, citing strong demand for AI chips.”
+* Q2: “$AAPL to the moon! Their new M4 chip just crushed everything else”
+* Q3: “Tesla faces another investigation over safety issues related to its autopilot system.”
+* Q4: “Why does $NFLX keep hiking prices? Canceling my subscription again.”
+* Q5: “We remain confident in our long-term growth strategy, supported by solid demand across all business segments.”
+
+
+Medium:
+* Q6: “Microsoft announced a partnership with a cloud startup to expand its AI services, but financial impact remains unclear.”
+* Q7: “While the quarter was challenging due to supply constraints, we expect gradual recovery in the next half.”
+* Q8: “Amazon’s profit margins declined for the third consecutive quarter despite rising overall revenue.”
+* Q9: “Our R&D investments will slightly impact margins this year but position us for stronger growth next year.”
+* Q10: “Not sure what to think about $META earnings. Feels like they’re spending too much on the metaverse.”
+* Q11: “Stock market today: Dow, S&P 500, Nasdaq end volatile week lower amid worst tech sell-off since April”
+Hard：
+* Q12: “Customer churn increased significantly this quarter, primarily due to product performance issues.”
+* Q13:“$TSLA just dropped 7% today… guess the hype is finally over.”
+* Q14:“Apple’s quarterly earnings beat analyst expectations, driven by strong iPhone sales and growing service revenue.”
+* Q15: “Despite revenue growth, we failed to meet profitability targets due to higher operational expenses.”
+* Q16: “Everyone keeps hyping $AMZN drones, but until they deliver to my door, it’s just talk.”
+
+
+Question type:
+1. Equity News Sentiment, ENS
+2. Equity Social Media Sentiment, ESM
+3. Equity Transcript Sentiment, ETS
+4. ES News Sentiment, ES-ESG
+5. Country News Sentiment, CNS
+
+
+FinGPT’s Accuracy: 13 out of 16 (81.3%)
+Perplexity’s Accuracy: 12 out of 16 (75%)
+Task
+	FinGPT
+	Perplexity
+	Easy(5)
+	5, 100%
+	3, 60%
+	Medium(6)
+	3, 50%
+	5, 83.3%
+	Hard(5)
+	5, 100%
+	4,80%
+	Total (16)
+	13, 81.3%
+	12, 75%
+	
+
+Easy:
+Q1: “NVIDIA stock surged after analysts raised their price target, citing strong demand for AI chips.” (Type: ENS)
+Truth: Positive
+
+
+FinGPT: Positive(correct)
+Perplexity: Positive(correct)
+
+
+Q2:“$AAPL to the moon! Their new M4 chip just crushed everything else” (Type: ESM)
+Truth: Positive
+
+
+FinGPT: Positive(correct)
+Perplexity: Positive(correct)
+
+
+Q3:“Tesla faces another investigation over safety issues related to its autopilot system.” (Type: ES-ESG)
+Truth: Negative
+
+
+FinGPT: Negative(correct)
+Perplextity: Neutral ( incorrect )
+
+
+Q4:“Why does $NFLX keep hiking prices? Canceling my subscription again.” (Type: ESM)
+Truth: Negative
+
+
+FinGPT: Negative(correct)
+Perplexity: Neutral ( incorrect )
+
+
+
+
+Q5:“We remain confident in our long-term growth strategy, supported by solid demand across all business segments.” (Type: ETS)
+
+
+Truth: Positive
+
+
+FinGPT: Positive(correct)
+Perplexity: Positive(correct)
+
+
+
+
+Medium:
+Q6: “Microsoft announced a partnership with a cloud startup to expand its AI services, but financial impact remains unclear.” (Type: ENS)
+Truth: Neutral
+
+
+FinGPT: Neutral(correct)
+Perplexity: Neutral(correct)
+
+
+Q7: “While the quarter was challenging due to supply constraints, we expect gradual recovery in the next half.” (Type: ETS)
+Truth: Neutral
+
+
+FinGPT: Positive(incorrect)
+Perplexity: Neutral(correct)
+
+
+
+
+Q8: “Amazon’s profit margins declined for the third consecutive quarter despite rising overall revenue.” (Type: ENS)
+Truth: Negative
+
+
+FinGPT:  Negative(correct)
+Perplexity: Negative(correct)
+
+
+
+
+Q9: “Our R&D investments will slightly impact margins this year but position us for stronger growth next year.” (Type: ETS)
+Truth: Neutral
+
+
+FinGPT: Positive(incorrect)
+Perplexity: Neutral(correct)
+
+
+
+
+Q10: “Not sure what to think about $META earnings. Feels like they’re spending too much on the metaverse.” (Type: ESM)
+Truth: Neutral
+
+
+FinGPT: Negative(incorrect)
+Perplexity: Negative(incorrect)
+
+
+
+
+Q11: “Stock market today: Dow, S&P 500, Nasdaq end volatile week lower amid worst tech sell-off since April” (Type: CNS)
+Truth: Negative
+
+
+FinGPT:  Negative(correct)
+Perplexity: Negative(correct)
+
+
+
+
+Hard:
+Q12: “Customer churn increased significantly this quarter, primarily due to product performance issues.” (Type: ETS)
+Truth: Negative
+
+
+FinGPT: Negative(correct)
+Perplexity: Negative(correct)
+
+
+
+
+Q13: “$TSLA just dropped 7% today… guess the hype is finally over.” (Type: ESM)
+Truth: Negative
+
+
+FinGPT: Negative(correct)
+Perplexity: Negative(correct)
+
+
+
+
+Q14: “Apple’s quarterly earnings beat analyst expectations, driven by strong iPhone sales and growing service revenue.” (Type: ENS)
+Truth: Positive
+
+FinGPT: Positive(correct)
+Perplexity: Positive(correct)
+
+
+
+
+ Q15: “Despite revenue growth, we failed to meet profitability targets due to higher operational expenses.” (Type: ETS)
+Truth: Negative
+
+
+FinGPT: Negative (correct)
+Perplexity: Negative(correct)
+
+
+
+
+Q16: “Everyone keeps hyping $AMZN drones, but until they deliver to my door, it’s just talk.” (Type: ESM)
+Truth: Negative
+
+
+FinGPT: Negative(correct)
+Perplexity: Neutral（incorrect）
+
+
+
+
+
+
+Failure Cases
+Q7: “While the quarter was challenging due to supply constraints, we expect gradual recovery in the next half.” (Type: ETS)
+Truth: Neutral
+
+
+FinGPT: Positive(incorrect)
+Q9: “Our R&D investments will slightly impact margins this year but position us for stronger growth next year.” (Type: ETS)
+Truth: Neutral
+
+
+FinGPT: Positive(incorrect)
+
+
+Q10: “Not sure what to think about $META earnings. Feels like they’re spending too much on the metaverse.” (Type: ESM)
+Truth: Neutral
+
+
+FinGPT: Negative(incorrect)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Question1: What will be the Largest Company at the end of November 2025?
+Truth: NVIDIA with about 97% support rate at Nov 4th 6:51pm  
+Source: https://polymarket.com/event/largest-company-end-of-november?tid=1762294889899
+
+
+
+
+FinGPT:
+NVIDIA edges out Microsoft and Apple to become the largest company by market cap at the end of November 2025, driven by AI dominance, profit acceleration, and investor sentiment. (Correct)
+
+
+Perplexity:
+Based on latest available data through November 2025, NVIDIA tops global market cap, followed closely by Microsoft and Apple.(Correct)
+
+
+Question2: What price will gold close at in 2025? 
+Truth: With Most people thinks the gold price will be between 3200 to 4000 dollars per ounce at Nov 4th 7:22pm
+  
+  
+
+source: https://polymarket.com/event/what-price-will-gold-close-at-in-2025?tid=1762302222780
+https://polymarket.com/event/what-price-will-gold-close-at-in-2025-4000-5000?tid=1762301902154
+
+
+
+
+
+
+
+
+FinGPT:
+At the end of 2025, gold is predicted to close around $2,500 per ounce, driven by rate cuts, central bank demand, and safe-haven investor flows. (Incorrect)
+
+
+Perplexity:
+In summary, gold is most likely to close 2025 at or above $4,000 per ounce, with the consensus range being $3,800–$4,600 per ounce, unless market conditions shift dramatically. (correct)
+Question3: What will be the 2nd Largest company at the end of November 2025?
+
+
+Truth: Apple with 76% support rate followed by Microsoft with 22% support rate at Nov 4 7:10 pm
+  
+
+source: https://polymarket.com/event/2nd-largest-company-end-of-november?tid=1762300530754
+
+
+FinGPT:
+💰 Projected Market Caps (End of November 2025)
+NVIDIA (NVDA): ~$3.4–3.6 trillion
+Microsoft (MSFT): ~$3.2–3.4 trillion
+Apple (AAPL): ~$3.0–3.2 trillion
+✅ Prediction Summary:
+At the end of November 2025, Microsoft will likely be the second-largest company in the world by market capitalization, narrowly behind NVIDIA, with Apple in third place.(correct)
+
+
+Perplexity:
+The second largest company in the world at the end of November 2025 is projected to be Microsoft, based on consensus from current market capitalization rankings and prediction markets.​
+
+
+Current Market Capitalization Rankings
+As of early November 2025, the world’s largest companies by market capitalization are:
+
+
+NVIDIA: approximately $4.90 trillion
+
+
+Microsoft: about $3.82 trillion
+
+
+Apple: close to $4.01 trillion​
+(Correct)
+
+
+
+
+Question4: Who will first go to 5k: Gold or ETH?
+Truth: 45% chance of Gold, 55% chance of ETH  at Nov 4 2025
+  
+
+source: 
+https://polymarket.com/event/first-to-5k-gold-or-eth?tid=1762304003528
+
+
+FinGPT: 
+Ethereum (ETH) is far more likely to reach $5,000 first, thanks to its higher volatility, past proximity to that level, and accelerating institutional adoption. Gold would require an extraordinary macro shock to catch up that fast.(incorrect)
+
+
+Perplexity: 
+In summary, Ethereum is highly likely to reach $5,000 before gold does based on market sentiment, volatility, and prediction markets as of November 2025.​(incorrect)
+
+
+Question5: What will Amazon (AMZN) hit in November 2025? 
+Truth: most people thinks will be above $260 at Nov4 7:50 pm 2025
+  
+
+source: https://polymarket.com/event/what-price-will-amzn-hit-in-november-2025?tid=1762303727082
+
+
+finGPT:
+By November 2025, Amazon’s stock (AMZN) is most likely to trade in the \$195 – \$210 range per share — near a **\$2.1 trillion** market capitalization 
+
+
+perplexity:
+Based on up-to-date forecasts and analyst consensus, Amazon (AMZN) is expected to finish November 2025 at approximately $249–$262 per share.
