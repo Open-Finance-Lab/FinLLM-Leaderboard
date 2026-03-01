@@ -1,4 +1,4 @@
-# Tutorials for Open FinLLM Leaderboard (OFLL): Evaluation and Benchmarking Suite for FinAI Readiness and Governance
+# Tutorials for Open FinLLM Leaderboard (OFLL): Evaluation and Benchmarking Suite for Financial Large Language Models and Agents
 
 [![Documentation Status](https://readthedocs.org/projects/finllm-leaderboard/badge/?version=latest)](https://finllm-leaderboard.readthedocs.io/en/latest/?badge=latest)
 
@@ -56,3 +56,4 @@ See our [Contribution Guide](https://finllm-leaderboard.readthedocs.io/en/latest
   year={2024}
 }
 ```
+
